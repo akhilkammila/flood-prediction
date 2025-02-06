@@ -24,3 +24,22 @@ What should I investigate?
 4. Investigate where the distribution of X-vars is different for the high means and low means
 - why are the low means even lower than their avg.
 - why are the high means even higher than their avg.
+
+Day 3:
+- Tried to continue KNN approach, found that it did not lead to improvment
+- Baseline approach of using mean X --> floodProbability based on other points with same mean X
+    - score 0.865 (better than 0.84x from before)
+
+Looked at official solutions
+- top score is 0.869
+
+Findings missed
+- original variables are poisson
+    - could have done statistical test
+- statistical descriptors are relevant
+    - median, std
+- we are effectively guessing noise (could have tried to model noise)
+    - an approach that comes to mind is guess noise function based on floodProbability n(floodProbability)
+    - then back out what the optimal guess is based on this function
+
+    - check if it is reasonable that we get our current values from this noise distribution
